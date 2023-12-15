@@ -5,6 +5,16 @@
  * @package ynysolutions
  */
 
+if(! defined('YNYSOLUTIONS_DIR_PATH')){
+    DEFINE ('YNYSOLUTIONS_DIR_PATH', untrailingslashit(get_template_directory()));
+}
+
+echo '<pre>';
+print_r('YNYSOLUTIONS_DIR_PATH');
+WP_DIE();
+
+ require_once 'YNYSOLUTIONS_DIR_PATH' . '/inc/helpers/autoloader.php';
+
 function ynysolutions_enqueue_scripts(){
     //Register Styles
     wp_register_style('style-css', get_stylesheet_uri(), [], 'all');

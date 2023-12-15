@@ -14,7 +14,7 @@
     <title>YNY Solutions</title>
 </head>
 <body>
-<?php get_template_part('template-parts/header/navbar.php'); ?>
+<?php get_template_part('template-parts/header/navbar'); ?>
 
 
 

@@ -6,13 +6,20 @@
  * 
  */
 get_header();
-?>
 
-<div class="content">
-    Content
-</div>
+trait Singleton {
+    public static function get_instance(){
+        static $instance = [];
 
-<?php 
+        $called_class = get_called_class();
+
+        if (! isset  ( $instance[ $called_class])){
+            $instance[ $called_class ] = new $called_class();
+        }
+        return $instance [ $called_class ];    }
+}
+
+
 
 get_footer();
 
